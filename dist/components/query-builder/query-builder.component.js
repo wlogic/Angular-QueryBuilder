@@ -168,9 +168,6 @@ var QueryBuilderComponent = /** @class */ (function () {
         else {
             console.warn("No 'type' property found on field: '" + field + "'");
         }
-        if (fieldObject.options) {
-            operators = operators.concat(['in', 'not in']);
-        }
         if (fieldObject.nullable) {
             operators = operators.concat(['is null', 'is not null']);
         }
@@ -187,8 +184,7 @@ var QueryBuilderComponent = /** @class */ (function () {
             case 'is null':
             case 'is not null':
                 return null; // No displayed component
-            case 'in':
-            case 'not in':
+            case 'In':
                 return 'multiselect';
             default:
                 return type;
