@@ -261,6 +261,10 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
     switch (operator) {
       case 'is null':
       case 'is not null':
+      case 'Start of Current Month':
+      case 'Start of Last Month':
+      case 'Today':
+      case 'Yesterday':
         return null;  // No displayed component
       case 'In':
         return 'multiselect';

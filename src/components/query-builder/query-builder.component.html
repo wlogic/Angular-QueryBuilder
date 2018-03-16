@@ -8,7 +8,7 @@
   <ng-template #defaultButtonGroup>
     <div [ngClass]="getClassNames('buttonGroup', 'rightAlign')">
       <button (click)="addRule()" [ngClass]="getClassNames('button')">
-        <i [ngClass]="getClassNames('addIcon')"></i> Rule
+        <i [ngClass]="getClassNames('addIcon')"></i> Filter
       </button>
       <button (click)="addRuleSet()" [ngClass]="getClassNames('button')" *ngIf="allowRuleset">
         <i [ngClass]="getClassNames('addIcon')"></i> Ruleset
