@@ -321,9 +321,9 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
     parent = parent || this.data;
     if (this.config.removeRule) {
       this.config.removeRule(rule, parent);
-    } else {
-      parent.rules = parent.rules.filter((r) => r !== rule);
     }
+
+    parent.rules = parent.rules.filter((r) => r !== rule);
     this.inputContextCache.delete(rule);
     this.operatorContextCache.delete(rule);
     this.fieldContextCache.delete(rule);

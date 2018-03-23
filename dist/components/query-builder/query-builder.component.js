@@ -245,9 +245,7 @@ var QueryBuilderComponent = /** @class */ (function () {
         if (this.config.removeRule) {
             this.config.removeRule(rule, parent);
         }
-        else {
-            parent.rules = parent.rules.filter(function (r) { return r !== rule; });
-        }
+        parent.rules = parent.rules.filter(function (r) { return r !== rule; });
         this.inputContextCache.delete(rule);
         this.operatorContextCache.delete(rule);
         this.fieldContextCache.delete(rule);
