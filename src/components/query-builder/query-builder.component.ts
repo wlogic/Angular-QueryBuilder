@@ -265,6 +265,8 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
       case 'Start of Last Month':
       case 'Today':
       case 'Yesterday':
+      case 'Enabled':
+      case 'Disabled':
         return null;  // No displayed component
       case 'In':
         return 'multiselect';
@@ -305,13 +307,12 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
     parent = parent || this.data;
     if (this.config.addRule) {
       this.config.addRule(parent);
-    } else {
-      const field = this.fields[0];
-      parent.rules = parent.rules.concat([{
+    }
+    const field = this.fields[0];
+    parent.rules = parent.rules.concat([{
         field: field.value,
         operator: this.getDefaultOperator(field)
-      }]);
-    }
+    }]);
 
     this.handleDataChange();
   }
