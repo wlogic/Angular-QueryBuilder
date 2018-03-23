@@ -187,6 +187,8 @@ var QueryBuilderComponent = /** @class */ (function () {
             case 'Start of Last Month':
             case 'Today':
             case 'Yesterday':
+            case 'Enabled':
+            case 'Disabled':
                 return null; // No displayed component
             case 'In':
                 return 'multiselect';
@@ -231,13 +233,11 @@ var QueryBuilderComponent = /** @class */ (function () {
         if (this.config.addRule) {
             this.config.addRule(parent);
         }
-        else {
-            var field = this.fields[0];
-            parent.rules = parent.rules.concat([{
-                    field: field.value,
-                    operator: this.getDefaultOperator(field)
-                }]);
-        }
+        var field = this.fields[0];
+        parent.rules = parent.rules.concat([{
+                field: field.value,
+                operator: this.getDefaultOperator(field)
+            }]);
         this.handleDataChange();
     };
     QueryBuilderComponent.prototype.removeRule = function (rule, parent) {
