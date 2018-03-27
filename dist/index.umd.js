@@ -544,6 +544,8 @@ var QueryBuilderComponent = /** @class */ (function () {
             case 'Enabled':
             case 'Disabled':
                 return null; // No displayed component
+            case 'Between':
+                return 'betweendate';
             case 'In':
                 return 'multiselect';
             default:

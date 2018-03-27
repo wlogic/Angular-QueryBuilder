@@ -268,6 +268,8 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
       case 'Enabled':
       case 'Disabled':
         return null;  // No displayed component
+      case 'Between':
+        return 'betweendate';
       case 'In':
         return 'multiselect';
       default:
