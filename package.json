@@ -1,5 +1,5 @@
 {
-  "name": "angular2-query-builder",
+  "name": "angular2-query-builder-wlogic",
   "version": "0.2.5",
   "description": "A modernized Angular 2+ query builder based on jquery QueryBuilder",
   "main": "./dist/index.umd.js",
