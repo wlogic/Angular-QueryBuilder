@@ -1,8 +1,8 @@
 /**
- * angular2-query-builder - A modernized Angular 2+ query builder based on jquery QueryBuilder
- * @version v0.2.4
+ * angular2-query-builder-wlogic - A modernized Angular 2+ query builder based on jquery QueryBuilder
+ * @version v0.2.6
  * @author Zeb Zhao
- * @link https://github.com/zebzhao/Angular-QueryBuilder#readme
+ * @link https://github.com/wlogic/Angular-QueryBuilder#readme
  * @license MIT
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -537,16 +537,16 @@ var QueryBuilderComponent = /** @class */ (function () {
         switch (operator) {
             case 'is null':
             case 'is not null':
-            case 'Start of Current Month':
-            case 'Start of Last Month':
-            case 'Today':
-            case 'Yesterday':
-            case 'Enabled':
-            case 'Disabled':
+            case '11':
+            case '12':
+            case '13':
+            case '14':
+            case '1':
+            case '2':
                 return null; // No displayed component
-            case 'Between':
+            case '10':
                 return 'betweendate';
-            case 'In':
+            case '5':
                 return 'multiselect';
             default:
                 return type;
