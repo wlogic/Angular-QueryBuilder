@@ -183,16 +183,16 @@ var QueryBuilderComponent = /** @class */ (function () {
         switch (operator) {
             case 'is null':
             case 'is not null':
-            case '11':
-            case '12':
-            case '13':
-            case '14':
-            case '1':
-            case '2':
+            case 'filters.operator.start_of_current_month':
+            case 'filters.operator.start_of_last_month':
+            case 'filters.operator.today':
+            case 'filters.operator.yesterday':
+            case 'filters.operator.enabled':
+            case 'filters.operator.disabled':
                 return null; // No displayed component
-            case '10':
+            case 'filters.operator.between':
                 return 'betweendate';
-            case '5':
+            case 'filters.operator.in':
                 return 'multiselect';
             default:
                 return type;

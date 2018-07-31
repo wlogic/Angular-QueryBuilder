@@ -253,7 +253,7 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
     return operators;
   }
 
-  getInputType(field: string, operator): string {
+  getInputType(field: string, operator: string): string {
     if (this.config.getInputType) {
       return this.config.getInputType(field, operator);
     }
@@ -261,16 +261,16 @@ export class QueryBuilderComponent implements OnInit, OnChanges, ControlValueAcc
     switch (operator) {
       case 'is null':
       case 'is not null':
-      case 11: // Start of current month
-      case 12: // Start of last month
-      case 13: // Today
-      case 14: // Yesterday
-      case 1: // Enabled
-      case 2: // Disabled
+      case 'filters.operator.start_of_current_month':
+      case 'filters.operator.start_of_last_month':
+      case 'filters.operator.today':
+      case 'filters.operator.yesterday':
+      case 'filters.operator.enabled':
+      case 'filters.operator.disabled':
         return null;  // No displayed component
-      case 10: // Between
+      case 'filters.operator.between':
         return 'betweendate';
-      case 5: // In
+      case 'filters.operator.in':
         return 'multiselect';
       default:
         return type;
